@@ -1,0 +1,27 @@
+.step.slide#symbols[data-x=x_succ data-y=0]
+  q
+    span Symbols 
+    small o que eles são??
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | config = :off
+          config.class #Symbol
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | :age.to_s # "age"
+          "age".to_sym # :age
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | "age".object_id #2152147960
+          "age".object_id #2151938960
+          :age.object_id #456328
+          :age.object_id #456328

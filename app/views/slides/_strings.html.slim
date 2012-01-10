@@ -1,0 +1,109 @@
+.step.slide#strings[data-x=x_succ data-y=0]
+  q
+    span Strings 
+    small são centopéias de caracteres
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | course = "Ruby 1.9"
+          course.class #String
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | #simple quotes
+          message = 'he was "sick"'
+          #double quotes
+          message = "he was 'sick'"
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | #%
+          message = %(he was "sick")
+          message = %[he was "sick"]
+          message = %{he was "sick"}
+          message = %/he was "sick"/
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | # heredoc
+          sql = <<-SQL
+            SELECT * FROM users;
+          SQL
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "John".size #4
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | hello = "Hello Ruby"
+          hello[0] #H
+          hello[1] #e
+          hello[6..10] #Ruby
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "brasil".capitalize
+          #Brasil
+          "HeY YoU!".downcase
+          #hey you!
+          "HeY YoU!".upcase
+          #HEY YOU!
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "abacate".count("a") #3
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "planilha".delete("lan")
+          #pilha
+
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "".empty? #true
+          "sunny".empty? #false
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.8em"]
+        | "i'm the walrus".include?("wall")
+          #false
+          "the wall".include?("wall")
+          #true
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "a".succ #b
+          "y".succ #z
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | "stressed".reverse
+          #desserts
