@@ -1,44 +1,54 @@
 .step.slide#regexps[data-x=x_succ data-y=0]
   q
     span Regular expressions
-    small ... essas são mais complexas
+    br
+    small ... regular whaaat?
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
+        | simple = /match/
+          simple.class #Regexp
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Identificador da variável
-    span[style="position:absolute; top: 60px;"] = image_tag 'arrow.png' 
+      code[class="ruby" style="font-size:0.9em"]
+        | "hello world" =~ /world/
+            #6
+          "hello world".match /world/
+            #&lt;MatchData "world">
+          /world/.match "hello world"
+            #&lt;MatchData "world">
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Valor da variável
-    span[style="position:absolute; top: 60px; left: 380px;"] = image_tag 'arrow.png'
+      code[class="ruby" style="font-size:0.9em"]
+        | "word" =~ /wor[dkm]/
+          "work" =~ /wor[dkm]/
+          "worm" =~ /wor[dkm]/
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Atribuição
-    span[style="position:absolute; top: 60px; left: 190px;"] = image_tag 'arrow.png'
-    
+      code[class="ruby" style="font-size:0.9em"]
+        | "1a1" =~ /1[a-z]1/
+          "1j1" =~ /1[a-z]1/
+          "1z1" =~ /1[a-z]1/
+
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Tipo é definido
-          # implicitamente
-    span[style="position:absolute; top: 60px; left: 245px;"] = image_tag 'arrow.png'
-    span[style="position:absolute; top: 60px; left: 510px;"] = image_tag 'arrow.png'
+      code[class="ruby" style="font-size:0.9em"]
+        | "a1" =~ /a[0-9]/
+          "a6" =~ /a[0-9]/
+          "a9" =~ /a[0-9]/
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | "word" =~ /worl?d/
+          "world" =~ /worl?d/

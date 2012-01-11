@@ -1,44 +1,86 @@
 .step.slide#numbers[data-x=x_succ data-y=0]
   q
-    span Fixnums & Floats 
+    span Fixnums & Bingnums & Floats 
+    br
     small são ... números
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
+        | age = 22
+          age.class #Fixnum
+          average = 7.5
+          average.class #Float
+          a_million = 1_000_000
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Identificador da variável
-    span[style="position:absolute; top: 60px;"] = image_tag 'arrow.png' 
+        | 22.to_f #22.0
+          7.5.to_i #7
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Valor da variável
-    span[style="position:absolute; top: 60px; left: 380px;"] = image_tag 'arrow.png'
+        | 22.to_s #"22"
+          "22".to_i #22
+          "22 patos".to_i #22
+          "gato tem 7 vidas".to_i #0
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Atribuição
-    span[style="position:absolute; top: 60px; left: 190px;"] = image_tag 'arrow.png'
-    
+        | 7.5.ceil #8
+          7.5.floor #7
+          7.5.round #8
+          7.4.round #7
+
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Tipo é definido
-          # implicitamente
-    span[style="position:absolute; top: 60px; left: 245px;"] = image_tag 'arrow.png'
-    span[style="position:absolute; top: 60px; left: 510px;"] = image_tag 'arrow.png'
+        | 16.even? #true
+          16.odd? #false
+          17.even? #false
+          17.odd? #true
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | 1.succ #2
+          99.succ #100
+          999.next #1000
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | 2 + 2 #4
+          3 * 3 #9
+          7 - 5 #2
+          10 / 2 #5
+          7 % 2 #1
+          5 ** 2 #25
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | 10 / 3 #3
+          10 / 3.0
+          #3.3333333333333335
+          
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | age = 12
+          age += 1 #13
+          age *= 2 #26
+          age -= 10 #16
+          age /= 2 #8

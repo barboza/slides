@@ -1,44 +1,18 @@
 .step.slide#booleans[data-x=x_succ data-y=0]
   q
-    span Booleans
+    span Booleans 
     small verdadeiro ou falso
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
+        | true.class #TrueClass
+          false.class #FalseClass
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Identificador da variável
-    span[style="position:absolute; top: 60px;"] = image_tag 'arrow.png' 
-
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Valor da variável
-    span[style="position:absolute; top: 60px; left: 380px;"] = image_tag 'arrow.png'
-
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Atribuição
-    span[style="position:absolute; top: 60px; left: 190px;"] = image_tag 'arrow.png'
-    
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Tipo é definido
-          # implicitamente
-    span[style="position:absolute; top: 60px; left: 245px;"] = image_tag 'arrow.png'
-    span[style="position:absolute; top: 60px; left: 510px;"] = image_tag 'arrow.png'
+        | ! true #false
+          ! false #true

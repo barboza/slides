@@ -1,44 +1,62 @@
 .step.slide#hashes[data-x=x_succ data-y=0]
   q
-    span Hashes
+    span Hashes 
     small são dicionários
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
+        | student = {
+            fullname: 'John Dewey',
+            age: 44,
+            approved: true
+          }
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Identificador da variável
-    span[style="position:absolute; top: 60px;"] = image_tag 'arrow.png' 
+        | 
+          # ruby 1.8.x
+          student = {
+            :fullname => 'John Dewey',
+            :age => 44,
+            :approved => true
+          }
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | student[:fullname] #John Dewey
+          student[:age] #44
+          student[:approved] #true
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Valor da variável
-    span[style="position:absolute; top: 60px; left: 380px;"] = image_tag 'arrow.png'
+        | {}.empty? #true
+          {when: 'now'}.empty? #false
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Atribuição
-    span[style="position:absolute; top: 60px; left: 190px;"] = image_tag 'arrow.png'
-    
+        | {a:1, b:2}.size #2
+
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Tipo é definido
-          # implicitamente
-    span[style="position:absolute; top: 60px; left: 245px;"] = image_tag 'arrow.png'
-    span[style="position:absolute; top: 60px; left: 510px;"] = image_tag 'arrow.png'
+        | hash = {a:1, b:2}
+          hash.keys #[:a, :b]
+          hash.values #[1, 2]
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | {a:1}.merge(b:2)
+          # {a:1, b:2}
