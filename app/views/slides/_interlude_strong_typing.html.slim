@@ -1,0 +1,17 @@
+.step.slide#interlude_strong_typing[data-x=x_succ data-y=0]
+  q
+    span Interlúdio 1 
+    small Tipagem forte
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="php"]
+        | // PHP
+          "1" + 1 // 2
+          "1" . 1 // "11"
+    pre
+      code[class="ruby"]
+        | # Ruby
+          "1" + 1
+    small TypeError: can't convert Fixnum into String

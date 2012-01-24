@@ -16,7 +16,7 @@
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby"]
+      code[class="ruby" style="font-size:0.9em"]
         | 
           # ruby 1.8.x
           student = {
@@ -28,7 +28,7 @@
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby" style="font-size:0.9em"]
+      code[class="ruby" style="font-size:0.85em"]
         | student[:fullname] #John Dewey
           student[:age] #44
           student[:approved] #true
@@ -36,7 +36,7 @@
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
-      code[class="ruby"]
+      code[class="ruby" style="font-size:0.9em"]
         | {}.empty? #true
           {when: 'now'}.empty? #false
 
@@ -60,3 +60,13 @@
       code[class="ruby"]
         | {a:1}.merge(b:2)
           # {a:1, b:2}
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | Hash[:a,1,:b,2]
+          # {a:1, b:2}
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  q Defina uma variável que defina uma lista com 3 carros, cada um com ano e marca. Depois vá até o site #{link_to "json.org", "http://json.org"} e veja se os diagramas te dizem algo.

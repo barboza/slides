@@ -6,4 +6,8 @@ module ApplicationHelper
   def x_current
     @@x
   end
+  # def code
+  #   @content = yield
+  #   render partial: 'slides/code', locals: {content: "a = 1"}
+  # end
 end

@@ -1,0 +1,63 @@
+.step.slide#iterators[data-x=x_succ data-y=0]
+  q
+    span Iteradores
+    small  continua se caso...
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | while rand(1000) != 666
+            puts "not the beast!"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.7em"]
+        | puts "not six!" while rand(10) != 6
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.7em"]
+        | colors = %w{red green blue}
+          for color in colors
+            puts color
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | colors = %w{red green blue}
+          colors.each do |color|
+            puts color
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | prices = [11.0, 25.9, 40.2]
+          prices.map{|p| p*2 }
+          # [22.0, 51.8, 80.4] 
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | ages = [20, 18, 32]
+          ages.map{|age| age.next }
+          => [21, 19, 33] 
+          ages.map &:next
+          => [21, 19, 33]
+
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | ages = [22, 16, 44]
+          ages.select{|age| age > 17 }
+          # [22, 44] 

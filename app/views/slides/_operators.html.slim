@@ -1,0 +1,51 @@
+.step.slide#operators[data-x=x_succ data-y=0]
+  q
+    span Operadores
+    small  na verdade eles não existem
+
+.step.slide.code#comparison[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | 1 == 1 # true
+          1 != 1 # false
+          2 > 1 # true
+          2 < 1 # false
+          1 === 1 # true
+          1 == "1" # false
+
+.step.slide.code#logical[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | true and true # true
+          false and true # false
+          true and false # false
+          false and false # false
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | true && true # true
+          true && puts("yay!") # nil
+          => yay!
+          false && puts("yay!") # false
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | false or true # true
+          true or false # true
+          true or true # true
+          false or false # false
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | true || false # true
+          false || puts("yay!") # nil
+          => yay!
+          true || puts("yay!") # true

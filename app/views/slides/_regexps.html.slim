@@ -34,17 +34,17 @@
   q
     pre
       code[class="ruby" style="font-size:0.9em"]
-        | "1a1" =~ /1[a-z]1/
-          "1j1" =~ /1[a-z]1/
-          "1z1" =~ /1[a-z]1/
+        | "a1" =~ /a[0-9]/
+          "a6" =~ /a[0-9]/
+          "a9" =~ /a\d/
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby" style="font-size:0.9em"]
-        | "a1" =~ /a[0-9]/
-          "a6" =~ /a[0-9]/
-          "a9" =~ /a[0-9]/
+        | "1a1" =~ /1[a-z]1/
+          "1j1" =~ /1[a-z]1/
+          "1z1" =~ /1\w1/
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
@@ -52,3 +52,44 @@
       code[class="ruby" style="font-size:0.9em"]
         | "word" =~ /worl?d/
           "world" =~ /worl?d/
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | "a" =~ /aw*/
+          "awww" =~ /aw*/
+          "awww" =~ /aw+/
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.9em"]
+        | "a" =~ /aw{0,3}/
+          "awww" =~ /aw{0,3}/
+          "awww" =~ /aw{3}/
+          
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em"]
+        | "90230-123" =~ /\d{5}-\d{3}/
+          "90230-123" =~ /^\d{5}-\d{3}$/
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.8em"]
+        | "Ruby sux".gsub(/sux/, 'rocks')
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em"]
+        | rx = /&lt;b>(.+)&lt;\/b>/
+          sub = '&lt;i>\1&lt;/i>'
+          "&lt;b>Hey&lt;/b>".gsub(rx, sub)
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  = image_tag 'http://cdn1.iconfinder.com/data/icons/dellipack/128/school.png'
+  q Tente formular uma substituição que transforme automaticamente uma data em formato japonês para o brasileiro.

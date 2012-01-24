@@ -76,7 +76,7 @@
         | [1,2] + [3,4]
           # [1,2,3,4]
           %w(rj rs sc sp) - %w(rj sp)
-          # ["rs", "rs"]
+          # ["rs", "sc"]
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
@@ -150,3 +150,6 @@
       code[class="ruby" style="font-size:0.9em"]
         | %w(me you me).uniq
             # ["me", "you"]
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  q Faça um código que converta uma data em formato japonês (e.g. 2012-10-20) em uma no formato brasileiro (e.g. 20/10/2012).

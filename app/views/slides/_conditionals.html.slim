@@ -1,0 +1,101 @@
+.step.slide#conditionals[data-x=x_succ data-y=0]
+  q
+    span Condicionais
+    small  se caso...
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | if 1 == 1
+            puts "1 é 1, yay!"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | if 1 == 1
+            puts "1 é 1, yay!"
+          else
+            puts "1 não é 1. wat?"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | if 1 == 1
+            puts "1 é 1, yay!"
+          elsif 1 == 2
+            puts "1 é 2. watat?"
+          else
+            puts "1 não é 1. wat?"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | puts "1 é 1!" if 1 == 1
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | puts "wat?" unless 1 == 1
+        
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em"]
+        | age = 22
+          puts age > 17 ? "beer" : "soda"
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em"]
+        | status = 2
+          case status
+          when 1
+            puts "pending"
+          when 2
+            puts "finished"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em"]
+        | hour = 12
+          case hour
+          when 0, 6, 12, 18
+            puts "medicine time"
+          else
+            puts "not medicine time"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em"]
+        | hour = 16
+          case hour
+          when 0..11
+            puts "goo' mo'nin'"
+          when 12..18
+            puts "goo' aftanoo'"
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+   pre
+     code[class="ruby" style="font-size:0.85em"]
+       | hour = "2pm"
+         case hour
+         when /^\d{2}$/
+           puts "brazilian"
+         when /^\d{1,2}(am|pm)$/
+           puts "american"
+         end

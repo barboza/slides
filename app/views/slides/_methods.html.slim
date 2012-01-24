@@ -1,0 +1,125 @@
+.step.slide#methods[data-x=x_succ data-y=0]
+  q
+    span Métodos
+    small  DRY nível 1
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def hello
+            puts "Hello!"
+          end
+          hello
+          => Hello!
+
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def hello name
+            puts "Hello, &#35;{name}!"
+          end
+          hello "John"
+          => Hello, John!
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def sum x, y
+            x + y
+          end
+          puts sum 2, 3
+          => 5
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def sum x, y, z=0
+            x + y + z
+          end
+          puts sum 2, 3
+          => 5
+          puts sum 2, 3, 4
+          => 9
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.8em; line-height: 1.4em;"]
+        | def sum *args
+            total = 0
+            args.each{|arg| total += arg }
+            total
+          end
+          puts sum 2, 3
+          => 5
+          puts sum 2, 3, 4, 5, 6
+          => 20
+          
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em;"]
+        | def sum *args
+            args.inject{|s,n| s + n }
+          end
+          puts sum 2, 3
+          => 5
+          puts sum 2, 3, 4, 5, 6
+          => 20
+          
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby" style="font-size:0.85em; line-height: 1.5em;"]
+        | def fac n
+            return 1 if n == 1
+            n * fac( n - 1 )
+          end
+          puts fac 3
+          => 6
+          puts fac 10
+          => 3628800
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def exec
+            yield
+          end
+          exec{ puts "yay!" }
+          => yay!
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def exec &b
+            b.call
+          end
+          exec{ puts "yay!" }
+          => yay!
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
+      code[class="ruby"]
+        | def exec_at
+            yield(Time.now)
+          end
+          exec_at{|t| puts t }
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  q
+    | Tente descobrir como isto pode ser implementado:
+    pre
+      code[class="ruby"]
+        | times(3){ puts "Ho!" }
+          => Ho!
+          => Ho!
+          => Ho!

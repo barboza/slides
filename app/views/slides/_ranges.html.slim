@@ -1,44 +1,21 @@
 .step.slide#ranges[data-x=x_succ data-y=0]
   q
     span Ranges
-    small faixas de números
+    small  faixas de números
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
+        | (0..99).begin # 0
+          (0..99).min # 0
+          (0..99).end # 99
+          (0..99).max # 99
 
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Identificador da variável
-    span[style="position:absolute; top: 60px;"] = image_tag 'arrow.png' 
-
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Valor da variável
-    span[style="position:absolute; top: 60px; left: 380px;"] = image_tag 'arrow.png'
-
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Atribuição
-    span[style="position:absolute; top: 60px; left: 190px;"] = image_tag 'arrow.png'
-    
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | course = "Ruby 1.9"
-          # Tipo é definido
-          # implicitamente
-    span[style="position:absolute; top: 60px; left: 245px;"] = image_tag 'arrow.png'
-    span[style="position:absolute; top: 60px; left: 510px;"] = image_tag 'arrow.png'
+        | (0..9).to_a
+      code[class="ruby" style="font-size:0.8em"]
+        | # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
