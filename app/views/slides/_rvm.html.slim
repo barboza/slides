@@ -1,4 +1,52 @@
+.step.slide#ruby_versions[data-x=x_succ data-y=0]
+  q
+    span Versões do Ruby
+    br
+    ul
+      small
+        li 01/2008 - 1.8.7
+        li 01/2010 - 1.9.2
+        li 10/2011 - 1.9.3p0
+
+    a href="http://github.com/ruby/ruby"
+      img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"
+
+.step.slide#ruby_implementations[data-x=x_succ data-y=0]
+  q
+    span Implementações do Ruby
+    br
+    ul
+      small
+        li MRI
+        li JRuby
+        li Rubinius
+        li Ruby Enterprise Edition
+        li MacRuby
+        li IronRuby
+
 .step.slide#rvm[data-x=x_succ data-y=0]
   q
-    span Instalando RVM 
-    small e Ruby 1.9.2
+    =image_tag 'rvm.png'
+    h1 Instalando RVM 
+    small[style="font-size: 0.32em"] 
+      i $ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+
+.step.slide#rvm_commands[data-x=x_succ data-y=0]
+  q
+    span
+     | Cheat Sheet
+    br
+    small
+      i $ rvm install 1.9.2   
+    br
+    small
+      i $ rvm --default use 1.9.2
+    br
+    small
+      i $ rvm gemset create hello_world
+    br
+    small
+      i $ rvm 1.9.2@hello_world
+    br
+    small
+      i $ echo "rvm 1.9.2@hello_world" > .rvmrc
