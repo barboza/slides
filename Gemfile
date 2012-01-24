@@ -16,3 +16,6 @@ gem 'slim'
 gem 'slim-rails'
 gem 'thin'
 gem 'heroku'
+
+gem 'execjs'
+gem 'therubyracer'
