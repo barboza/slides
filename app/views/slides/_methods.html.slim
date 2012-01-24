@@ -114,12 +114,39 @@
           end
           exec_at{|t| puts t }
 
-.step.slide.exercise[data-x=x_succ data-y=0]
+.step.slide.code[data-x=x_succ data-y=0]
   q
-    | Tente descobrir como isto pode ser implementado:
     pre
       code[class="ruby"]
+        | def young?(age)
+            age < 18
+          end
+          young?(22) # false
+          young?(12) # true
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  = image_tag 'http://cdn1.iconfinder.com/data/icons/oldschool_babasse/Png/Hardware/ordinateur%20off.png'
+  q[style="font-size:1.1em"]
+    | Crie uma função que recebe um estado e retorna se este existe no Brasil. Ex:
+    pre
+      code[class="ruby" style="line-height:1.2em"]
+        | state_exists?("RS") # true
+          state_exists?("ZZ") # false
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  = image_tag 'http://cdn1.iconfinder.com/data/icons/oldschool_babasse/Png/Hardware/ordinateur%20off.png'
+  q[style="font-size:1.1em"]
+    | Tente descobrir como isto pode ser implementado:
+    pre
+      code[class="ruby" style="line-height:1.2em"]
         | times(3){ puts "Ho!" }
           => Ho!
           => Ho!
           => Ho!
+
+.step.slide.exercise[data-x=x_succ data-y=0]
+  = image_tag 'http://cdn1.iconfinder.com/data/icons/oldschool_babasse/Png/Hardware/ordinateur%20off.png'
+  q[style="font-size:1.1em"]
+    | Crie uma função que retorna o Fibonacci de um número utilizando recursão. Uma ajudinha:
+  br
+  = image_tag 'http://upload.wikimedia.org/wikipedia/en/math/6/4/9/649e0916236c15cf5b768a0339612dac.png', style: 'margin-left: 100px'
