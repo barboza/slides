@@ -1,4 +1,73 @@
 .step.slide#git[data-x=x_succ data-y=0]
   q
+    = image_tag 'github.jpg', style:'width:300px;height:300px;'
+    br
     span Trabalhando com Git
-    small e GitHub
+    small  e GitHub
+    
+
+.step.slide#install_git[data-x=x_succ data-y=0]
+  q
+    span Instalando o git
+    br
+    br
+    small
+      span
+        strong linux: 
+        i # aptitude install git-core
+      br
+      span 
+        strong mac: 
+        | code.google.com/p/git-osx-installer/
+      br
+      span 
+        strong windows: 
+        | code.google.com/p/msysgit/
+
+      br
+      br
+      small[style="font-size: 0.5em"] 
+        | help.github.com/mac-set-up-git | help.github.com/linux-set-up-git | help.github.com/win-set-up-git
+
+.step.slide#configure_git[data-x=x_succ data-y=0]
+  q
+    span Configurando o git
+    br
+    small
+      i $ ssh-keygen
+      br
+      i $ cat ~/.ssh/id_rsa.pub
+      br
+      | github.com/account/ssh
+      br
+      br
+      i $ git config --global user.name "Pedro Axelrud"
+      br
+      i $ git config --global user.email pedroaxl@gmail.com
+
+.step.slide#initializing_repo[data-x=x_succ data-y=0]
+  q
+    span Criando um repositório git
+    br
+    small[style="font-size:0.6em"]
+      i
+        | $ git init
+        br
+        | $ git add .
+        br
+        | $ git commit -m 'first commit'
+        br
+        | $ git remote add origin git@github.com:pedroaxl/workshop.git
+        br
+        | $ git push -u origin master
+
+.step.slide#git_cheat_sheet[data-x=x_succ data-y=0]
+  q
+    span Cheat Sheet
+    br
+    small
+      i $ git pull
+      br
+      i $ git commit -a -m 'commit message'
+      br
+      i $ git push

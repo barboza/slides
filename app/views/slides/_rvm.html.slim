@@ -27,9 +27,14 @@
 .step.slide#rvm[data-x=x_succ data-y=0]
   q
     =image_tag 'rvm.png'
-    h1 Instalando RVM 
-    small[style="font-size: 0.32em"] 
-      i $ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+    h1 
+      | Instalando RVM 
+      small beginrescueend.com
+    br
+    p[style="font-size:0.4em"]
+        | Does RVM work on windows? Will it in the future? NO.
+        br
+        | for windows: github.com/vertiginous/pik/ or rubyinstaller.org
 
 .step.slide#rvm_commands[data-x=x_succ data-y=0]
   q
@@ -37,16 +42,16 @@
      | Cheat Sheet
     br
     small
-      i $ rvm install 1.9.2   
+      i $ rvm install 1.9.3   
     br
     small
-      i $ rvm --default use 1.9.2
+      i $ rvm --default use 1.9.3
     br
     small
       i $ rvm gemset create hello_world
     br
     small
-      i $ rvm 1.9.2@hello_world
+      i $ rvm 1.9.3@hello_world
     br
     small
-      i $ echo "rvm 1.9.2@hello_world" > .rvmrc
+      i $ echo "rvm 1.9.3@hello_world" > .rvmrc
