@@ -14,6 +14,20 @@
 .step.slide.code[data-x=x_succ data-y=0]
   q
     pre
+      code[class="ruby" style="font-size:0.8em; line-height: 1.4em"]
+        | File.open('file.txt').lines
+          while true
+            begin
+              line = lines.next
+              #...
+            rescue StopIteration => e
+              break
+            end
+          end
+
+.step.slide.code[data-x=x_succ data-y=0]
+  q
+    pre
       code[class="ruby" style="font-size:0.7em"]
         | puts "not six!" while rand(10) != 6
 
