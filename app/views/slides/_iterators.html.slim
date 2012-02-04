@@ -15,7 +15,7 @@
   q
     pre
       code[class="ruby" style="font-size:0.8em; line-height: 1.4em"]
-        | File.open('file.txt').lines
+        | lines = File.open('file').lines
           while true
             begin
               line = lines.next
