@@ -1,152 +1,83 @@
 .step.slide#methods[data-x=x_succ data-y=0]
   q
     span Métodos
-    small  DRY nível 1
 
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.describe_context[data-x=x_succ data-y=0]
   q
+    | describe / context
     pre
       code[class="ruby"]
-        | def hello
-            puts "Hello!"
-          end
-          hello
-          => Hello!
+        | describe "user" do
+            context "without parameters" do
+              #tests
 
 
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.it[data-x=x_succ data-y=0]
   q
+    | it
     pre
       code[class="ruby"]
-        | def hello name
-            puts "Hello, &#35;{name}!"
-          end
-          hello "John"
-          => Hello, John!
+        | it "should be true" do
+            #test 
 
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.pending[data-x=x_succ data-y=0]
   q
+    | pending / xit
     pre
       code[class="ruby"]
-        | def sum x, y
-            x + y
-          end
-          puts sum 2, 3
-          => 5
+        | pending "not implemented yet"
 
-.step.slide.code[data-x=x_succ data-y=0]
+          xit "should be true" do
+            #tests
+          end
+
+.step.slide.hooks[data-x=x_succ data-y=0]
   q
+    | Hooks
     pre
       code[class="ruby"]
-        | def sum x, y, z=0
-            x + y + z
-          end
-          puts sum 2, 3
-          => 5
-          puts sum 2, 3, 4
-          => 9
+        | before(:all) {} #:each / :suite
+          after(:all) {} #:each / :suite
 
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.matchers[data-x=x_succ data-y=0]
   q
-    pre
-      code[class="ruby" style="font-size:0.8em; line-height: 1.4em;"]
-        | def sum *args
-            total = 0
-            args.each{|arg| total += arg }
-            total
-          end
-          puts sum 2, 3
-          => 5
-          puts sum 2, 3, 4, 5, 6
-          => 20
+    | Matchers
           
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby" style="font-size:0.85em;"]
-        | def sum *args
-            args.inject{|s,n| s + n }
-          end
-          puts sum 2, 3
-          => 5
-          puts sum 2, 3, 4, 5, 6
-          => 20
-          
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.be[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby" style="font-size:0.85em; line-height: 1.5em;"]
-        | def fac n
-            return 1 if n == 1
-            n * fac( n - 1 )
-          end
-          puts fac 3
-          => 6
-          puts fac 10
-          => 3628800
+        | false.should_not be_true
+          10.should be < 20
+          1.should be_true
+          @newUser.should be_an_instance_of(User)
+          55.should be_within(10).of(60)
 
-.step.slide.code[data-x=x_succ data-y=0]
+          
+
+.step.slide.others[data-x=x_succ data-y=0]
   q
     pre
       code[class="ruby"]
-        | def exec
-            yield
-          end
-          exec{ puts "yay!" }
-          => yay!
+        | @user.should exists
+          @impares.should include(3,7)
+          @user.should respond_to(:logout)
 
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.predicados[data-x=x_succ data-y=0]
   q
+    | Metodos predicados
     pre
       code[class="ruby"]
-        | def exec &b
-            b.call
-          end
-          exec{ puts "yay!" }
-          => yay!
+        | 1.odd?.should be_true
+          1.should be_odd
 
-.step.slide.code[data-x=x_succ data-y=0]
+.step.slide.sujeito[data-x=x_succ data-y=0]
   q
+    | Sujeito
     pre
       code[class="ruby"]
-        | def exec_at
-            yield(Time.now)
-          end
-          exec_at{|t| puts t }
+        | describe User do
+            subject { User.new :name => "Foo"}
 
-.step.slide.code[data-x=x_succ data-y=0]
-  q
-    pre
-      code[class="ruby"]
-        | def young?(age)
-            age < 18
-          end
-          young?(22) # false
-          young?(12) # true
-
-.step.slide.exercise[data-x=x_succ data-y=0]
-  = image_tag 'http://cdn1.iconfinder.com/data/icons/oldschool_babasse/Png/Hardware/ordinateur%20off.png'
-  q[style="font-size:1.1em"]
-    | Crie uma função que recebe um estado e retorna se este existe no Brasil. Ex:
-    pre
-      code[class="ruby" style="line-height:1.2em"]
-        | state_exists?("RS") # true
-          state_exists?("ZZ") # false
-
-.step.slide.exercise[data-x=x_succ data-y=0]
-  = image_tag 'http://cdn1.iconfinder.com/data/icons/oldschool_babasse/Png/Hardware/ordinateur%20off.png'
-  q[style="font-size:1.1em"]
-    | Tente descobrir como isto pode ser implementado:
-    pre
-      code[class="ruby" style="line-height:1.2em"]
-        | times(3){ puts "Ho!" }
-          => Ho!
-          => Ho!
-          => Ho!
-
-.step.slide.exercise[data-x=x_succ data-y=0]
-  = image_tag 'http://cdn1.iconfinder.com/data/icons/oldschool_babasse/Png/Hardware/ordinateur%20off.png'
-  q[style="font-size:1.1em"]
-    | Crie uma função que retorna o Fibonacci de um número utilizando recursão. Uma ajudinha:
-  br
-  = image_tag 'http://upload.wikimedia.org/wikipedia/en/math/6/4/9/649e0916236c15cf5b768a0339612dac.png', style: 'margin-left: 100px'
+            it{ should be_an_instance_of(User) }
+            its(:name){ should be == "Foo"}

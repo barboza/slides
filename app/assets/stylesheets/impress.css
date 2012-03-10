@@ -531,3 +531,7 @@ small{
 pre code{
   font-family: 'Monaco' !important;
 }
+
+very_small {
+    font-size: 14;
+}
